@@ -10,7 +10,7 @@ import { UpdatepassService } from "./services/updatepass.service"
 })
 export class AppComponent {
   loadingIndicador = true;
-  constructor(private _router:Router,private updatePass :UpdatepassService){
+  constructor(private _router:Router,public updatePass :UpdatepassService){
 
     this._router.events.subscribe((routerEvent: Event)=>{
 

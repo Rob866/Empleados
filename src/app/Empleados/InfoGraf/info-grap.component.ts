@@ -26,6 +26,7 @@ export class InfoGrapComponent implements OnInit {
   showLabels= true;
   explodeSlices=false;
   doughnut=false;
+  gradient=true;
 
 
 
