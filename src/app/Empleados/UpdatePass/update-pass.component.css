@@ -1,0 +1,25 @@
+.borderRed {
+    border: 2px solid red;
+}
+
+label,span{ 
+    color: aliceblue;
+}
+h5{
+    color: antiquewhite;
+    text-transform: uppercase;
+}
+h5{
+    text-align: center;
+}
+.cont {
+    border :5px solid blue;
+}
+.advertencia {
+    line-height: 40px;
+    background-color: blue;
+    text-align: center;
+    border-radius: 10px;
+
+
+}

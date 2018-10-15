@@ -1,0 +1,68 @@
+<div class="row justify-content-center align-items-center" style="height : 100vh">
+<div *ngIf="testForm" class="cont col-12 col-md-6">
+  <h5>Credenciales anteriores</h5>
+<form #adminForm="ngForm" (ngSubmit)="testPass('testPass')"
+  (keydown.enter)="$event.preventDefault()">
+  
+  <div class="form-group">
+    <label for="user">Admin</label>
+    <input  required [(ngModel)]="credenciales.user" type="text" class="form-control" id="user" 
+    name="user" [ngClass]="{'borderRed': user.invalid && user.touched }" #user="ngModel">
+    <span *ngIf="user.invalid && user.touched">
+      Usuario requerido
+    </span>
+  </div>
+  
+  <div class="form-group">
+    <label for="pass">Password</label>
+    <input required type="password" [(ngModel)]="credenciales.pass"  class="form-control" id="pass"
+    name="pass" [ngClass]="{'borderRed': pass.invalid && pass.touched }" #pass="ngModel">
+
+     <span *ngIf="pass.invalid && pass.touched">
+      Password requerido
+    </span>
+  </div>
+
+  <br>
+   <div *ngIf="show && testForm"class="advertencia col-12">Admin o Password  incorrecto</div>
+  <br>
+  <button type="submit" class="btn btn-light" [disabled]="adminForm.invalid">Check</button>
+</form>
+</div>
+
+<div *ngIf="!testForm" class="cont col-12 col-md-6">
+  <h5>Actualizar Credenciales</h5>
+<form #adminForm="ngForm" (ngSubmit)="testPass('changePass')"
+  (keydown.enter)="$event.preventDefault()">
+  
+  <div class="form-group">
+    <label for="user">Admin</label>
+    <input  required [(ngModel)]="credenciales.user" type="text" class="form-control" id="user" 
+    name="user" [ngClass]="{'borderRed': user.invalid && user.touched }" #user="ngModel">
+    <span *ngIf="user.invalid && user.touched">
+      Usuario requerido
+    </span>
+  </div>
+  
+  <div class="form-group">
+    <label for="pass">Password</label>
+    <input required type="password" [(ngModel)]="credenciales.pass"  class="form-control" id="pass"
+    name="pass" [ngClass]="{'borderRed': pass.invalid && pass.touched }" #pass="ngModel">
+
+     <span *ngIf="pass.invalid && pass.touched">
+      Password requerido
+    </span>
+  </div>
+
+  <br>
+  
+  <button type="submit" class="btn btn-light" [disabled]="adminForm.invalid">
+  <span style="color:black" *ngIf="testForm">check</span>
+  <span style="color:black" *ngIf="!testForm">Change</span></button>
+</form>
+</div>
+
+
+</div>
+
+

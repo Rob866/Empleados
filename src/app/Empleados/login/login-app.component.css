@@ -1,0 +1,72 @@
+.advertencia {
+    line-height: 40px;
+    background-color: blue;
+    text-align: center;
+    border-radius: 10px;
+
+
+}
+
+.cont {
+    position: relative;
+    background-color: black;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+label {
+    color: white;
+}
+
+.capucha {
+    position: absolute;
+    top:0;
+    left: 0;
+    width :100%;
+    height: 100%;
+    transition: 2s;
+    z-index: 1000;
+    background-color: black;
+    background-image: url("../../../assets/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.centro {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.centro button {
+     padding: 10px 15px;
+     border-radius: 10%;
+     border: 2px solid black;
+     background-color: transparent;
+     cursor: pointer;
+     
+}
+
+.addClass{
+    left: -100%;
+}
+
+.close{
+    position: absolute;
+    top:10%;
+    left: 90%;
+    
+}
+
+.borderRed{
+    border: 2px solid red;
+}
+
+span {
+    color: white;
+}
+

@@ -1,0 +1,33 @@
+.flex1 {
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.flex2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    flex-wrap: wrap;
+
+}
+img,ul {
+    width: 50%;
+    height: 88%;
+
+}
+h2{
+    height: 50px;
+    width: 100%;
+    color:white ;
+    background-color: black
+
+
+}
+.card-header {
+    box-shadow:         inset 0 0 10px #000000;
+
+}
+

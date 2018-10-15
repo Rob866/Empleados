@@ -1,0 +1,42 @@
+ 
+ <div class="card" style="margin-top: 5px">
+    <div class="card-header" style="cursor: pointer;" (click)="mostrar()" [ngClass]="{'insert': idPassParam === empleado.id }">{{ empleado.nombre }}</div>   
+ 
+<div class="card-body" [ngStyle]="{ 'display' : _display? 'block' :'none'}">
+ <div class="card-columns flex1" width="100%">
+  
+    <div class="card flex2" >
+  
+        <img [src]="empleado.fotoPath" alt="Card image cap">
+     
+        <ul class="list-group list-group-flush">
+        
+          <li class="list-group-item">Id: {{ empleado.id }}</li>
+          <li class="list-group-item">Nombre: {{ empleado.nombre }}</li>
+        </ul>
+    </div>
+  </div> 
+  <div class="row">
+      <div class="col-12 col-sm-8">
+          <div class="botones row justify-content-around"> 
+                <button class="bt btn btn-primary" (click)="show()"><i class="fas fa-user"></i></button>
+                <button *ngIf="passService.adminActive" class="bt btn btn-primary" (click)="edit()"><i class="fas fa-user-edit"></i></button>
+                <button *ngIf="passService.adminActive"class="bt btn btn-danger"(click)="openModal(template)"><i class="fas fa-trash-alt"></i></button>
+          </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+    <div class="modal-body text-center">
+      <p>Estas seguro de eliminar el empleado?</p>
+      <button type="button" class="btn btn-danger" (click)="delete()" style="width : 50px; margin-right: 10px">SI</button>
+      <button type="button" class="btn btn-primary" (click)="decline()">NO</button>
+    </div>
+</ng-template>
+
+  
+
+
