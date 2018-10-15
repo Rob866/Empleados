@@ -16,8 +16,8 @@ import {Pass} from "../models/Pass.model"
 export class ListEmpleadoService {
 
 
-  baseUrl :string = "http://localhost:3000/empleados";
-  basePass:string = "http://localhost:3000/acceso";
+  baseUrl :string = "https://empleado-project.herokuapp.com//empleados";
+  basePass:string = "https://empleado-project.herokuapp.com//acceso";
 
   constructor(private httpClient : HttpClient) { }
 

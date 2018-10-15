@@ -19,13 +19,13 @@ export class EmpleadoDetailComponent implements OnInit{
   @Output("EditData") DataEdit = new EventEmitter<number>();
   @Output("deleteData") deleteData = new EventEmitter<number>();
 
-  private idPassParam :number;
-  private _display :boolean= false;
+  idPassParam :number;
+  _display :boolean= false;
   modalRef: BsModalRef;
 
 
   constructor(private modalService: BsModalService,private ruta : ActivatedRoute,
-    private empleadosService :ListEmpleadoService,private passService :UpdatepassService) { 
+    private empleadosService :ListEmpleadoService,public passService :UpdatepassService) { 
 
   }
 
